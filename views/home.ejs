@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>title</title>
+    </head>
+    <body>
+        <ul>
+            <% cryptoData.forEach(function(crypto) { %>
+                <li><%= crypto.code %> - <%= crypto.name %>:
+                    <% if (crypto.is_crypto) { %>
+                         ✅ 
+                    <% } else { %>
+                         ❌ 
+                    <% } %>
+                </li>
+            <% }); %>
+        </ul>
+    </body>
+</html>
